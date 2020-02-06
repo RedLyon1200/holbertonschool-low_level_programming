@@ -12,7 +12,7 @@ while (a <= 57) /* 57 is 9 on ASCII */
 putchar(a);
 a++;
 }
-while (b <=102) /* 102 is f on ASCCI */
+while (b <= 102) /* 102 is f on ASCCI */
 {
 putchar(b);
 b++;
