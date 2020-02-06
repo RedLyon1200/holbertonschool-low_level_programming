@@ -15,7 +15,7 @@ a++;
 }
 putchar(a);
 a++;
-if (a == 'z')
+if (a > 'z')
 {
 putchar('\n');
 }
