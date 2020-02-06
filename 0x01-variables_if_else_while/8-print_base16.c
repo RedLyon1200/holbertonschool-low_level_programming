@@ -3,8 +3,10 @@
  * main - entry point
  * Return: always 0 (seccess)
  */
-int main(void){
-char a, b;
+int main(void)
+{
+char a;
+char b;
 a = 48; /* 48 is 0 on ASCII */
 b = 97; /* 97 is a on ASCII */
 while (a <= 57) /* 57 is 9 on ASCII */
