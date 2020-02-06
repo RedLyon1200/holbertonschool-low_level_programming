@@ -18,7 +18,7 @@ while ( A <= 'Z')
 putchar(A);
 A++;
 }
-if (a > '<' || A > 'Z')
+if (a > 'z' || A > 'Z')
 {
 putchar('\n');
 }
