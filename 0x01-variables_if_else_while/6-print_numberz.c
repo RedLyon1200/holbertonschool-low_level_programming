@@ -6,7 +6,7 @@
 int main(void)
 {
 int num;
-num = 48;
+num = 47;
 while (num < 57)
 {
 num++;
