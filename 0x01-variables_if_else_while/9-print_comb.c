@@ -1,4 +1,4 @@
-#include <stdio.h>
+BB#include <stdio.h>
 /**
  * main - entry point
  * Return: always 0 (success)
@@ -11,7 +11,8 @@ while (n <= 57) /* 57 is 9 on ASCII */
 putchar(n);
 if (n != 57)
 {
-putchar(', ');
+putchar(',');
+putchar(' ');
 }
 n++;
 }
