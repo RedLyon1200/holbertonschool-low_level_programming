@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
  * print_times_table - print the times table n times
+ * @n: variable
  */
 void print_times_table(int n)
 {
