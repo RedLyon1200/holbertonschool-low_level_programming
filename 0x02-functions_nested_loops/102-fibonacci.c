@@ -4,8 +4,7 @@ int main(void)
 {
 	long num1 = 1, num2 = 2, num3, fib, count = 0;
 
-	printf("%ld, ", num1);
-	printf("%ld, ", num2);
+	printf("1, 2, ");
 	for (count = 0; count <= 47; count++)
 	{
 		fib = num1 + num2;
