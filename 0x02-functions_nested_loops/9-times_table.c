@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * times_table - asdasda
+ * times_table - print the table 9 times starting from scratch
  */
 void times_table(void)
 {
@@ -13,7 +13,7 @@ void times_table(void)
 		_putchar('0');
 		for (b = 1; b <= 9; b++)
 		{
-			if((a * b) <= 9)
+			if ((a * b) <= 9)
 			{
 				_putchar(comma);
 				_putchar(space);
