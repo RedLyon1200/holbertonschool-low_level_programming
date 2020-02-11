@@ -2,21 +2,22 @@
 
 int main(void)
 {
-	long num1 = 1, num2 = 2, num3, fib, count = 0;
+	long c, f, l, i;
 
+	c = 0;
+	f = 3;
+	i = 1;
+	l = 2;
 	printf("1, 2, ");
-	for (count = 0; count <= 47; count++)
+	while (c < 47)
 	{
-		fib = num1 + num2;
-		num3 = fib;
-		num1 = num2;
-		num2 = num3;
-		if (count == 47)
-			printf("%ld", fib);
-		else
-			printf("%ld, ", fib);
+		printf("%ld, ", f);
+		i = l;
+		l = f;
+		f = i + l;
+		c++;
 	}
-	printf("\n");
+	printf("%ld\n", f);
 
 	return (0);
 }
