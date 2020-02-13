@@ -1,38 +1,61 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
- * print_number - prints a number
- * @n: Input number
+ * mypow - Quick pow implementation.
+ * Description: Multiples number by itself a number of times
+ * designated by the exponent.
+ *
+ * @base: base number
+ * @exponent: exponent, number of times to multiply base by itself
+ * Return: returns zero
  */
+long mypow(long base, long exponent)
+{
+	long val = 1;
 
+	while (exponent > 0)
+	{
+		val *= base;
+		exponent--;
+	}
+	return (val);
+
+}
+
+/**
+ * print_number - takes in number, outputs  using putchar
+ *
+ * @n: number to putchar
+ * Return: void
+ */
 void print_number(int n)
 {
-	long len, res, i, temp, expo;
+	long digits, stop, i, num, temp;
 
-	res = n;
-	expo = len =  1;
-/*Check negatives*/
-	if (res < 0)
+	i = 1;
+	digits = 0;
+	stop = 0;
+	temp = n;
+	if (temp < 0)
 	{
-		res *= -1;
 		_putchar('-');
+		temp = (temp - (temp * 2));
+	}
+	while (stop == 0)
+	{
+		if ((temp / mypow(10, i)) < 1)
+			break;
+		i++;
+		digits++;
 	}
 
-/**/
-	temp = res;
-	while (temp >= 10)
-	{
-		len++;
-		temp /= 10;
-	}
+	num = temp / mypow(10, digits);
+	_putchar(num + '0');
 
-/*Create Exponent*/
-	for (i = 1; i < len; i++)
-		expo *= 10;
-/*Main */
-	while (expo > 1)
+	while (digits > 0)
 	{
-		_putchar((res / expo) % 10 + '0');
-		expo /= 10;
+		num = temp % mypow(10, digits--);
+		num = num / mypow(10, digits);
+		_putchar(num + '0');
 	}
-	_putchar(res % 10 + '0');
 }
