@@ -1,61 +1,73 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
- * mypow - Quick pow implementation.
- * Description: Multiples number by itself a number of times
- * designated by the exponent.
- *
- * @base: base number
- * @exponent: exponent, number of times to multiply base by itself
- * Return: returns zero
- */
-long mypow(long base, long exponent)
+* check_zero - checks the number of zeros in the given int
+* @n: number to be checked
+* Return: number of zeros
+**/
+
+int check_zero(int n)
 {
-	long val = 1;
+	int modNum = 10;
+	int zeroCounter = 0;
 
-	while (exponent > 0)
+	while (modNum != 1000000000)
 	{
-		val *= base;
-		exponent--;
+		if (n % modNum == 0)
+		{
+			zeroCounter++;
+		}
+		else if (n % modNum != 0)
+		{
+			break;
+		}
+		modNum *= 10;
 	}
-	return (val);
-
+	return (zeroCounter);
 }
 
 /**
- * print_number - takes in number, outputs  using putchar
- *
- * @n: number to putchar
- * Return: void
- */
+* print_number - prints an int
+* @n: int to be printed
+* Return: nothing
+**/
+
 void print_number(int n)
 {
-	long digits, stop, i, num, temp;
+	long casted_n, duplicate;
 
-	i = 1;
-	digits = 0;
-	stop = 0;
-	temp = n;
-	if (temp < 0)
+	casted_n = n;
+	duplicate = 0;
+
+	if (casted_n < 0)
 	{
 		_putchar('-');
-		temp = (temp - (temp * 2));
+		casted_n = casted_n * -1;
 	}
-	while (stop == 0)
+	if (casted_n > 9)
 	{
-		if ((temp / mypow(10, i)) < 1)
-			break;
-		i++;
-		digits++;
-	}
+		while (casted_n != 0)
+		{
+			duplicate = duplicate * 10;
+			duplicate = duplicate + casted_n % 10;
+			casted_n = casted_n / 10;
+		}
+		while (duplicate != 0)
+		{
+			_putchar(duplicate % 10 + '0');
+			duplicate = duplicate / 10;
+		}
+		if (check_zero(n) != 0)
+		{
+			int zeros = check_zero(n);
 
-	num = temp / mypow(10, digits);
-	_putchar(num + '0');
-
-	while (digits > 0)
-	{
-		num = temp % mypow(10, digits--);
-		num = num / mypow(10, digits);
-		_putchar(num + '0');
+			while (zeros != 0)
+			{
+				_putchar('0');
+				zeros--;
+			}
+		}
 	}
+	else
+		_putchar(casted_n + '0');
 }
