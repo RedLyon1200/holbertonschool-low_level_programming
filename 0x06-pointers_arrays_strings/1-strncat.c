@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
- * _strcat - concatenates two strings
+ * _strncat - concatenates two strings
  * @dest: character dest
  * @src: string
+ * @n: number of max. bytes
  *
  * Return: dest
  */
