@@ -1,29 +1,31 @@
 #include "holberton.h"
+
 /**
- * rot13 - function that encodes a string using rot13
- * @str: character
- * Return: string in rot13
+ * rot13 - converts upper/lowercase letters to rot13
+ *
+ *
+ *
+ * @s: string to convert to rot13
+ * Return: returns converted string
  */
-char *rot13(char *str)
+char *rot13(char *s)
 {
 	int i;
-	int j;
-	char from[] = "abcdefghijklmABCDEFGHIJKLM";
-	char to[] = "nopqrstuvwxyzNOPQRSTUVWXYZ";
 
-	for (i = 0; str[i] != '\0'; i++)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		for (j = 0; from[j] != '\0'; j++)
+		while ((s[i] >= 'a' && s[i] <= 'z') ||
+		       (s[i] >= 'A' && s[i] <= 'Z'))
 		{
-			if (str[i] == from[j])
-			{
-			str[i] = to[j];
-			}
-			else if (str[i] == to[j])
-			{
-				str[i] = from[j];
-			}
+			if ((s[i] >= 'N' && s[i] <= 'Z') ||
+			    (s[i] >= 'n' && s[i] <= 'z'))
+				s[i] -= 13;
+			else
+				s[i] += 13;
+			i++;
 		}
+		i++;
 	}
-	return (str);
+	return (s);
 }
