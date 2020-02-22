@@ -1,28 +1,44 @@
 #include "holberton.h"
+
 /**
- * cap_string - capitalizes all words of a string
- * @str: character string
+ * delim - determines if character is a deliminater character
  *
- * Return: string with each word capitalized
+ * @c: char to check on
+ * Return: 1 if delim, 0 if not
  */
-
-char *cap_string(char *str)
+int delim(char c)
 {
-	int i = 0;
+	if (c == ' ' || c == '\t' || c == '\n' || c == ',' || c == ';' ||
+	    c == '.' || c == '!' || c == '?' || c == '"' || c == '(' ||
+	    c == ')' || c == '{' || c == '}')
+		return (1);
+	return (0);
+}
 
-	for (i = 0; str[i] != '\0'; i++)
-	{
-	if (i == 0)
+/**
+ * cap_string - capitalizes chars after given deliminators
+ *
+ *
+ *
+ * @s: string to uppercase
+ * Return: returns modified string
+ */
+char *cap_string(char *s)
+{
+	int i;
 
+	i = 0;
+	if (s[i] >= 'a' && s[i] <= 'z')
+		s[i] -= 32;
+	while (s[i] != '\0')
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		if (delim(s[i]) == 1 && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
 		{
-			str[i] -= 32;
+			s[i + 1] -= 32;
+			i++;
 		}
-		else if (str[i - 1] == 32||'\t'||'\n'||','||';'||'.'||'!'||'?'||
-			 '"'||'('||')'||'{'||'}')
-			str[i] -= 32;
+		else
+			i++;
 	}
-	}
-	return (str);
+	return (s);
 }
