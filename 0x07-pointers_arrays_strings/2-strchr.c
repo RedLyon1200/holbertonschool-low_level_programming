@@ -9,7 +9,7 @@ char *_strchr(char *s, char c)
 {
 	int count = 0;
 
-	for (count = 0; s[count] != c; count++)
+	for (count = 0; s[count] != '\0'; count++)
 	{
 		if (s[count] == c)
 			return (s + count);
@@ -17,5 +17,5 @@ char *_strchr(char *s, char c)
 	if (s[count] == c)
 		return (s + count);
 
-	return (00);
+	return ('\0');
 }
