@@ -1,5 +1,11 @@
 #include "holberton.h"
-
+/**
+ * _strstr - function
+ * @haystack: substring
+ * @needle: string
+ *
+ * Return: pointer
+ */
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j, k;
