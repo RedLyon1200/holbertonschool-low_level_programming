@@ -7,7 +7,7 @@
 	- [project](https://intranet.hbtn.io/projects/212 "Instructions") - :fa-code-fork:
 	- [development](https://github.com/RedLyon1200/holbertonschool-low_level_programming/tree/master/0x00-hello_world "Code") - :fa-code:
 
-- **0x01. C - Variables, if, else, while **
+- **0x01. C - Variables, if, else, while**
 	- [project](https://intranet.hbtn.io/projects/213 "Instructions") - :fa-code-fork:
 	- [development](https://github.com/RedLyon1200/holbertonschool-low_level_programming/tree/master/0x01-variables_if_else_while "Code") - :fa-code:
 
