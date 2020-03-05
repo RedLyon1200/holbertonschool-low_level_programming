@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * string_nconcat - concatenate 2 strings* @s1: string 1
+ * string_nconcat - concatenate 2 strings
+ * @s1: string 1
  * @s2: string 2
  * @n: bytes to concatenate
  * Return: pointer to concatenated string
