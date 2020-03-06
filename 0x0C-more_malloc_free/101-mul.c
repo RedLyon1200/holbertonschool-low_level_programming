@@ -39,6 +39,31 @@ void exiterror(void)
 
 
 
+
+/**
+ * _strlen_recursion - returns the length of a string.
+ * @s: string
+ *
+ * Return: size of string
+ */
+int _strlen_recursion(char *s)
+{
+	int size = 0;
+
+	if (*s == '\0' || *s < 0 || *s > 9)
+	{
+		exiterror();
+	}
+	else
+	{
+		size = _strlen_recursion(s + 1);
+		size++;
+	}
+	return (size);
+}
+
+
+
 /**
  * main - mult 2 numbers
  * @argc: number of arguments
@@ -49,10 +74,16 @@ void exiterror(void)
  */
 int main(int argc, char *argv[])
 {
+	int sizeofarg1, sizeofarg2;
+
 	(void) argv;
+	(void) sizeofarg2;
 
 	if (argc != 3)
 		exiterror();
+
+	sizeofarg1 = _strlen_recursion(argv[1]);
+	sizeofarg2 = _strlen_recursion(argv[2]);
 
 	return (0);
 }
