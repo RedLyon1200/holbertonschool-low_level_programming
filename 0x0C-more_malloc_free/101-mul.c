@@ -77,7 +77,6 @@ int main(int argc, char *argv[])
 	int sizeofarg1, sizeofarg2;
 
 	(void) argv;
-	(void) sizeofarg2;
 
 	if (argc != 3)
 		exiterror();
