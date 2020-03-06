@@ -50,7 +50,11 @@ int _strlen_recursion(char *s)
 {
 	int size = 0;
 
-	if (*s == '\0' || *s < 0 || *s > 9)
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	else if (*s < '0' || *s > '9')
 	{
 		exiterror();
 	}
@@ -75,8 +79,6 @@ int _strlen_recursion(char *s)
 int main(int argc, char *argv[])
 {
 	int sizeofarg1, sizeofarg2;
-
-	(void) argv;
 
 	if (argc != 3)
 		exiterror();
