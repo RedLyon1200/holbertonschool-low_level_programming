@@ -21,9 +21,7 @@ int _putchar(char c)
 
 
 /**
- *
- *
- *
+ * exiterror - exit with error message and exit(98)
  */
 void exiterror(void)
 {
@@ -42,7 +40,6 @@ void exiterror(void)
 
 
 /**
- *
  * main - mult 2 numbers
  * @argc: number of arguments
  * @argv: arguments passed
