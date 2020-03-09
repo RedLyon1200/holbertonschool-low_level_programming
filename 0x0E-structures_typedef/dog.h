@@ -14,4 +14,4 @@ struct dog
 	float age;
 };
 
-#endif
+#endif /* CRASHED_MACHINE */
