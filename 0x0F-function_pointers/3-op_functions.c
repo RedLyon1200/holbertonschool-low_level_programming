@@ -2,27 +2,48 @@
 #include <stdio.h>
 
 /**
- * op_add - sum a and b
- * @a: num1
- * @b: num2
+ * op_add - returns the sum of a and b.
+ * @a: integer 1
+ * @b: integer 2
  *
- * Return: the sum of a and b
+ * Return: sum of 2 integers
  */
 int op_add(int a, int b)
 {
 	return (a + b);
 }
 
+/**
+ * op_sub - returns the difference of a and b.
+ * @a: integer 1
+ * @b: integer 2
+ *
+ * Return: difference of 2 integers
+ */
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
 
+/**
+ * op_mul - returns the product of a and b
+ * @a: integer 1
+ * @b: integer 2
+ *
+ * Return: product of 2 integers
+ */
 int op_mul(int a, int b)
 {
 	return (a * b);
 }
 
+/**
+ * op_div - returns the result of the division of a by b
+ * @a: integer 1
+ * @b: integer 2
+ *
+ * Return: dividend of 2 integers
+ */
 int op_div(int a, int b)
 {
 	if (a == 0 || b == o)
@@ -33,6 +54,13 @@ int op_div(int a, int b)
 	return (a / b);
 }
 
+/**
+ * op_mod - returns the remainder of the division of a by b
+ * @a: integer 1
+ * @b: integer 2
+ *
+ * Return: remainder of division of 2 integers
+ */
 int op_mod(int a, int b)
 {
 	if (a == 0 || b == o)
