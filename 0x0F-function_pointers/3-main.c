@@ -3,10 +3,9 @@
 #include <stdio.h>
 /**
  * main - entry point
- * @argc: number of argumentsargument count
- * @argv: arguments passed
- *
- * Return: 0 always success
+ * @argc: argument count
+ * @argv: argumemnt vector
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
