@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include "lists.h"
 #include <stdlib.h>
+#include "lists.h"
 
 /**
  * list_len - count elements of struct
