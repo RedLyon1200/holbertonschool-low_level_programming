@@ -9,22 +9,24 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int err = 0, size = 0;
-	int fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	int data, newfile, size = 0;
 
-	if (fd < 0)
-	{
+/* Error Validators */
+	if (filename == NULL)
 		return (-1);
-	}
-	while (!text_content[size]) /* size of content */
+/* read */
+	data = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
+
+	if (data == -1)
+		return (data);
+	if (text_content == NULL)
+		return (1); /* success */
+/* obtains size of text */
+	while (text_content[size])
 		size++;
-
-
-	err = write(fd, text_content, size);
-	if (err < 0)
-	{
-		return (-1);
-	}
-	close(fd);
+	newfile = write(data, text_content, size);
+	close(data);
+	if (newfile == -1)
+		return (newfile);
 	return (1);
 }
