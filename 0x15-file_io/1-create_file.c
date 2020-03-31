@@ -19,7 +19,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	while (!text_content) /* size of content */
+	while (!text_content[size]) /* size of content */
 		size++;
 
 	buffer = malloc(sizeof(*buffer) * size);
@@ -29,7 +29,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	err = write(fd, &buffer, size);
+	err = write(fd, text_content, size);
 	if (err < 0)
 	{
 		free(buffer);
