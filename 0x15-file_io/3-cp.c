@@ -49,7 +49,7 @@ void R_err(char *file)
 void W_err(char *file)
 {
 	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
-	exit(98);
+	exit(99);
 }
 
 
