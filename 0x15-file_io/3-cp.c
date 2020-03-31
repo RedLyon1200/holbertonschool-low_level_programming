@@ -1,5 +1,13 @@
-#include "holberton.h"
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 #define BUFFSIZE 1024
+void W_err(char *file);
+void R_err(char *file);
+void C_err(char *file);
+void _checker(char *from, char *to);
+
 
 /**
  * _checker - check if files are NULL
@@ -82,8 +90,10 @@ int main(int ac, char *av[])
 			R_err(av[1]);
 	}
 	retval = close(file_from);
-	C_err(av[1]);
+	if (retval == -1)
+		C_err(av[1]);
 	retval = close(file_to);
-	C_err(av[2]);
+	if (retval == -1)
+		C_err(av[2]);
 	return (0);
 }
