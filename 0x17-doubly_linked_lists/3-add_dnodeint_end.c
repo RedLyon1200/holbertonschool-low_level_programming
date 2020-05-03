@@ -1,5 +1,4 @@
 #include "lists.h"
-dlistint_t *new_node2(const int n);
 /**
  * add_dnodeint_end -  adds a new node at the end of a dlistint_t list.
  * @head: head of list
