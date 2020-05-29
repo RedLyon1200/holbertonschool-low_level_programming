@@ -2,6 +2,9 @@
 
 /**
  * hash_table_set - function that adds an element to the hash table.
+ * @ht: hash table
+ * @key: key :v
+ * @value: idx value
  *
  * Return: 1 if it succeeded, 0 otherwise
  */
