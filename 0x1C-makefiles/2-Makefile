@@ -1,0 +1,13 @@
+# make -f 2-Makefile
+
+CC = gcc
+CFLAGS = -pedantic -Wall -Werror -Wextra
+NAME = holberton
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o)
+
+all: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+clean:
+	rm -f $(NAME) $(OBJ)
