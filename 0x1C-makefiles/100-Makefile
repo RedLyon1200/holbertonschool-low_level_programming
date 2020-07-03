@@ -1,0 +1,27 @@
+# make -f 3-Makefile
+
+# variables
+CC = gcc
+CFLAGS = -g -pedantic -Wall -Werror -Wextra
+NAME = holberton
+SRC = main.c holberton.c
+# a implicit rule
+OBJ = $(SRC:.c=.o)
+HEADER = m.h
+COMPILE = $(CC) $(OBJ)
+
+.PHONY: all clean oclean fclean re
+
+all: $(OBJ) $(HEADER)
+	$(COMPILE) -o $(NAME)
+
+re: fclean all
+
+clean:
+	@$(RM) -f *~ $(NAME)
+
+oclean:
+	@$(RM) -f $(OBJ)
+
+fclean: oclean clean
+
