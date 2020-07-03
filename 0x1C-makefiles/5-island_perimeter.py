@@ -1,13 +1,17 @@
 #!/usr/bin/python3
 
 """
-[summary]
+5. Island Perimeter
+Technical interview preparation:
+
+- You are not allowed to google anything
+- Whiteboard first
 """
 
 
 def island_perimeter(grid):
     """
-    [summary]
+    [returns the perimeter of the island described in grid]
     """
     water = 0
     terrain = 1
