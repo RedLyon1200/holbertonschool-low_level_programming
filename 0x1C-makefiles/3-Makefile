@@ -13,10 +13,12 @@ COMPILE = $(CC) $(CFLAGS) $(OBJ)
 all: $(OBJ)
 	$(COMPILE) -o $(NAME)
 
+re: fclean all
+
 clean:
-	$(RM) *~ $(NAME)
+	@$(RM) *~ $(NAME)
 
 oclean:
-	$(RM) $(OBJ)
+	@$(RM) $(OBJ)
 
 fclean: oclean clean
