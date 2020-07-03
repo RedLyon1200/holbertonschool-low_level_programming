@@ -24,4 +24,3 @@ oclean:
 	@$(RM) -f $(OBJ)
 
 fclean: oclean clean
-
