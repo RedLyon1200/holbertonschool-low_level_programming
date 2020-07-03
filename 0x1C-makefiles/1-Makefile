@@ -1,0 +1,12 @@
+# make -f 1-Makefile
+
+CC = gcc
+FLAGS = -pedantic -Wall -Werror -Wextra
+PROGRAM = holberton
+SRC = main.c holberton.c
+
+all: $(SRC)
+	$(CC) $(FLAGS) -o $(PROGRAM) $(SRC)
+
+clean:
+	rm -f $(PROGRAM) *.o
